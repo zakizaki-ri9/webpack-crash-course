@@ -15,4 +15,10 @@ yarn info webpack
 # webpackの導入（必要なら@つけてバージョン指定する）
 #  -Dは開発環境にのみインストールするという意味合い
 yarn add -D webpack webpack-cli
+
+# live-serverの導入
+yarn add -D live-server
+
+# ローカル環境での実行
+yarn run live-server
 ```
