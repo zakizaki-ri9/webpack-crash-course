@@ -41,3 +41,14 @@ yarn add lodash
 # Webpackを使って参照するファイルをバンドル -> main.jsへ出力される
 yarn run webpack
 ```
+
+### webpack-dev-server
+
+```bash
+# webpack-dev-serverの導入
+yarn add -D webpack-dev-server
+
+# 起動 ＆ ブラウザ表示
+yarn run webpack-dev-server --open
+
+```
