@@ -1,6 +1,7 @@
 # webpack-crash-course
 
-Webpackの練習
+- コース: https://www.udemy.com/webpack-crash-course/
+- Webpackの練習
 
 ## 内容メモ
 
