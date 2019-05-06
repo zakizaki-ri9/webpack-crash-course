@@ -8,6 +8,9 @@
 - Webpackを用いない場合、HTMLロード時にCDN経由で様々なJS/CSSを取得する
   - コストが高い
   - 全てをバンドル（まとめた）状態のファイルを作っておくのがWebpack
+- `package.json`の`scripts`
+  - `npm`や`yarn`といったコマンドを登録しておける
+  - `start`にまとめたコマンドは`npm start`や`yarn start`で実行することができる
 
 ## 手順まとめ
 
@@ -40,4 +43,14 @@ yarn add lodash
 
 # Webpackを使って参照するファイルをバンドル -> main.jsへ出力される
 yarn run webpack
+```
+
+### webpack-dev-server
+
+```bash
+# webpack-dev-serverの導入
+yarn add -D webpack-dev-server
+
+# 起動 ＆ ブラウザ表示
+yarn run webpack-dev-server --open
 ```

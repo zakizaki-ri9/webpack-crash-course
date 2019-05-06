@@ -11,5 +11,9 @@ module.exports = {
   output: {
     filename: 'main.js', // 出力ファイル名
     path: outputPath // 絶対パスである必要がある
+  },
+  // webpack-dev-serverの設定
+  devServer: {
+    contentBase: outputPath // rootの位置をdistに変更
   }
 };
