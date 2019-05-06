@@ -6,8 +6,11 @@ Webpackの練習
 
 - Webpackを用いない場合、HTMLロード時にCDN経由で様々なJS/CSSを取得する
   - コストが高い
+  - 全てをバンドル（まとめた）状態のファイルを作っておくのがWebpack
 
 ## 手順まとめ
+
+### Webpackを用いない場合
 
 ```bash
 # package.jsonの生成 -yはyesスキップ
@@ -26,4 +29,14 @@ yarn add -D live-server
 
 # ローカル環境での実行
 yarn run live-server
+```
+
+### Webpackの適用
+
+```bash
+# lodashをインストール
+yarn add lodash
+
+# Webpackを使って参照するファイルをバンドル -> main.jsへ出力される
+yarn run webpack
 ```
