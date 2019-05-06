@@ -9,6 +9,8 @@ Webpackの練習
 
 ## 手順まとめ
 
+### Webpackを用いない場合
+
 ```bash
 # package.jsonの生成 -yはyesスキップ
 yarn init -y
@@ -26,4 +28,14 @@ yarn add -D live-server
 
 # ローカル環境での実行
 yarn run live-server
+```
+
+### Webpackの適用
+
+```bash
+# lodashをインストール
+yarn add lodash
+
+# Webpackを使って参照するファイルをバンドル -> main.jsへ出力される
+yarn run webpack
 ```
