@@ -5,6 +5,9 @@
   "repository": "https://github.com/zakizaki-ri9/webpack-crash-course.git",
   "author": "zakizaki-ri9 <kic.yuuki@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
   "devDependencies": {
     "live-server": "^1.2.1",
     "webpack": "^4.30.0",
