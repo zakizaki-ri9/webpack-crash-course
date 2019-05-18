@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --open"
   },
-  "hosky": {
+  "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
@@ -16,7 +16,6 @@
   "lint-staged": {
     "linters": {
       "*.js": [
-        "prettier --write",
         "eslint --fix",
         "git add"
       ]
