@@ -1,5 +1,5 @@
 export function Nijou(num) {
-  return num ** 2;
+  return num ** 2
 }
 
-export const NAME = 'utilities';
+export const NAME = 'utilities'

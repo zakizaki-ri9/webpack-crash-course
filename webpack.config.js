@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require('path')
 
 // resolve: 絶対パスの生成
-const outputPath = path.resolve(__dirname, 'dist');
+const outputPath = path.resolve(__dirname, 'dist')
 //console.log({ outputPath });
 
 module.exports = {
@@ -16,4 +16,4 @@ module.exports = {
   devServer: {
     contentBase: outputPath // rootの位置をdistに変更
   }
-};
+}
