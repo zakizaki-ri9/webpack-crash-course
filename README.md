@@ -54,3 +54,59 @@ yarn add -D webpack-dev-server
 # 起動 ＆ ブラウザ表示
 yarn run webpack-dev-server --open
 ```
+
+# その他
+
+## `lint-staged` x `husky`で`git commit`時にeslintのチェックをかける
+
+- 参考記事
+  - [Qiita - コミット前に Lint を強制するなら lint-staged が便利](https://qiita.com/ybiquitous/items/553479cfcb2cee124ae0)
+  - [Qiita - npmモジュール`pre-commit`を利用してチーム全体で低品質なコードをコミットできないようにする](https://qiita.com/potato4d/items/5dfebb9da1c5fe400809)
+- lint-staged: https://github.com/okonet/lint-staged
+- husky: https://github.com/typicode/husky
+
+### 概要
+
+GitのHook機能（今回はCommit）を利用し、コミット時に様々なフォーマットやlintによるチェックを行い、
+チーム開発等で決められている（eslintなどの）ルールに反したコードのCommit ／ Pushを防ぐことができる。
+
+### 手順
+
+```bash
+# 必要なプラグインの導入
+yarn add -D eslint lint-staged husky
+```
+
+`package.json`の設定を行う。
+
+- **"husky"**は以下ドキュメントに記載している通りに記載。
+  - https://github.com/okonet/lint-staged#examples
+- **"lint-staged"**にはコミット前に走らせたいコマンドと`git add`を記載する。
+  - `*.js`ファイルにeslintのチェックをかけたい場合は以下のドキュメントのように記載する。
+    - https://github.com/okonet/lint-staged#automatically-fix-code-style-with---fix-and-add-to-commit
+- **"ignore"**には対象外のディレクトリやファイルを指定する。
+
+以下、参考。
+
+```json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "dist/**/*"
+    ]
+  }
+}
+```
+
+おわり。
