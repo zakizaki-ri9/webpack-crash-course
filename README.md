@@ -11,6 +11,11 @@
 - `package.json`の`scripts`
   - `npm`や`yarn`といったコマンドを登録しておける
   - `start`にまとめたコマンドは`npm start`や`yarn start`で実行することができる
+- Loader
+  - [Loader Features](https://webpack.js.org/concepts/loaders#loader-features)
+    - `in reverse order`という記述がある。
+    - `webpack.config.js`に記載したLoaderは逆順に適用される。
+    - 記述する順番に注意する。
 
 ## 手順まとめ
 

@@ -1,8 +1,5 @@
 import _ from 'lodash'
-import * as utilities from './utilities'
-
-// eslint-disable-next-line no-console
-console.log(`Nijou: ${utilities.Nijou(2)}, NAME: ${utilities.NAME}`)
+import './style.css'
 
 function component() {
   const element = document.createElement('div')
@@ -12,3 +9,4 @@ function component() {
 }
 
 document.body.appendChild(component())
+document.body.classList.add('background')
