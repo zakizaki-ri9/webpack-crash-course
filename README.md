@@ -12,10 +12,14 @@
   - `npm`や`yarn`といったコマンドを登録しておける
   - `start`にまとめたコマンドは`npm start`や`yarn start`で実行することができる
 - Loader
+  - 様々な要素（CSSや画像など）をjsにバンドルしてくれる仕組み
   - [Loader Features](https://webpack.js.org/concepts/loaders#loader-features)
     - `in reverse order`という記述がある。
     - `webpack.config.js`に記載したLoaderは逆順に適用される。
     - 記述する順番に注意する。
+  - [file-loader](https://github.com/webpack-contrib/file-loader)
+    - 全てjsファイルにバンドルすると重たくなってくる
+    - ファイルとして出力、imageタグ等の適切なタグに置き換えてくれる
 
 ## 手順まとめ
 
