@@ -18,6 +18,17 @@ module.exports = {
         test: /\.css$/,
         // use: ['css-loader', 'style-loader'] // Webpackは逆順にLoaderを適用するため、左記設定では動かない
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './images/[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
