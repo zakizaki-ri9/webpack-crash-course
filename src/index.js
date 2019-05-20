@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import './style.css'
+import zaki from './zaki2.png'
 
 function component() {
   const element = document.createElement('div')
@@ -10,3 +11,7 @@ function component() {
 
 document.body.appendChild(component())
 document.body.classList.add('background')
+
+const image = new Image()
+image.src = zaki
+document.body.appendChild(image)
