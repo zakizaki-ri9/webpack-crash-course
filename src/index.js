@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import './style.css'
+import './style.scss'
 import zaki from './zaki2.png'
 
 function component() {
