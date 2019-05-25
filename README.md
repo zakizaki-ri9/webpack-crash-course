@@ -20,6 +20,10 @@
   - [file-loader](https://github.com/webpack-contrib/file-loader)
     - 全てjsファイルにバンドルすると重たくなってくる
     - ファイルとして出力、imageタグ等の適切なタグに置き換えてくれる
+  - Babel
+    - https://babeljs.io/
+      - どのブラウザでも見れるようトランスパイルしてくれる
+      - 導入したい言語や環境ごとのSetup手順が見れる
 
 ## 手順まとめ
 
@@ -63,6 +67,48 @@ yarn add -D webpack-dev-server
 # 起動 ＆ ブラウザ表示
 yarn run webpack-dev-server --open
 ```
+
+### Babel - Webpack x Reactを用いる場合
+
+```bash
+# Reactの導入
+yarn add -D react react-dom
+
+# babelの導入
+yarn add -D babel-loader @babel/core
+
+# ES2015以降のシンタックスに対応するために導入
+yarn add -D @babel/preset-env
+
+# Reactの対応
+yarn add -D @babel/preset-react
+```
+
+**webpack.config.js**
+```js
+module: {
+  rules: [
+    {
+      test: /\.jsx?$/, // .js or .jsxを対象とする
+      exclude: /node_modules/,
+      loader: 'babel-loader'
+    },
+  ]
+}
+```
+
+**.babelrc.js**
+presetの有効化
+```js
+module.exports = {
+  presets: ['@babel/preset-env', '@babel/preset-react']
+}
+```
+
+#### 参考URL
+
+- https://babeljs.io/setup#installation
+- https://babeljs.io/docs/en/babel-preset-react
 
 # その他
 

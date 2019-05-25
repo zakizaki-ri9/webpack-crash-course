@@ -4,7 +4,8 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: 'eslint:recommended',
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  plugins: ['react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -16,7 +17,7 @@ module.exports = {
   rules: {
     singleQuote: true,
     indent: ['error', 2],
-    semi: ['error', 'never', { beforeStatementContinuationChars: 'never' }],
+    semi: [2, 'never'],
     'semi-spacing': ['error', { after: true, before: false }],
     'semi-style': ['error', 'first'],
     'no-extra-semi': 'error',
