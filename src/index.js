@@ -5,5 +5,5 @@ ReactDOM.render(
   <div>
     <span>Hello, React!</span>
   </div>,
-  document.getElementById('react')
+  document.getElementById('root')
 )

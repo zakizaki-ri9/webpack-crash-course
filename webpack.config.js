@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // resolve: 絶対パスの生成
 const outputPath = path.resolve(__dirname, 'dist')
@@ -38,11 +39,21 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
       }
     ]
   },
   // webpack-dev-serverの設定
   devServer: {
     contentBase: outputPath // rootの位置をdistに変更
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: './index.html'
+    })
+  ]
 }
