@@ -20,10 +20,10 @@
   - [file-loader](https://github.com/webpack-contrib/file-loader)
     - 全てjsファイルにバンドルすると重たくなってくる
     - ファイルとして出力、imageタグ等の適切なタグに置き換えてくれる
-  - Babel
-    - https://babeljs.io/
-      - どのブラウザでも見れるようトランスパイルしてくれる
-      - 導入したい言語や環境ごとのSetup手順が見れる
+- Babel
+  - https://babeljs.io/
+    - どのブラウザでも見れるようトランスパイルしてくれる
+    - 導入したい言語や環境ごとのSetup手順が見れる
 
 ## 手順まとめ
 
