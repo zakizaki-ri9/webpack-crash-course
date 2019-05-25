@@ -15,6 +15,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.jsx?$/, // .js or .jsxを対象とする
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
         test: /\.css$/,
         // use: ['css-loader', 'style-loader'] // Webpackは逆順にLoaderを適用するため、左記設定では動かない
         use: ['style-loader', 'css-loader']
