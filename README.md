@@ -110,6 +110,24 @@ module.exports = {
 - https://babeljs.io/setup#installation
 - https://babeljs.io/docs/en/babel-preset-react
 
+### ソースマップ
+
+色々バンドルするとエラーの追跡・解析が難しくなる。  
+その解決方法として、ソースマップを用いる。
+
+- [Webpack - Devtool](https://webpack.js.org/configuration/devtool/)
+- [WebpackのDevtoolについての解説](https://dackdive.hateblo.jp/entry/2016/04/13/123000#devtool)
+
+以下設定例。指定する値によってWebDevtool常に表示されるソースが元に近い状態であるか、  
+また、ビルド速度に違いが発生する。
+
+**webpack.config.js**
+```js
+{
+  devtool: 'eval-source-map'
+}
+```
+
 # その他
 
 ## `lint-staged` x `husky`で`git commit`時にeslintのチェックをかける
